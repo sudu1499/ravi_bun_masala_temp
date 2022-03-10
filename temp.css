@@ -1,0 +1,202 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Permanent Marker', cursive;
+
+}
+nav{
+    position: relative;
+    display: flex;
+    place-items: center;
+    background-color: rgb(65, 62, 62);
+    color:white;
+    font-size: 20px;
+    justify-content: space-between;
+    min-height: 60px;
+    width: 100vw;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    margin:10px;
+}
+a{
+    text-decoration: none;
+    color:white
+}
+.ll{
+    margin-left: 20px;
+}
+.ll:hover,nav ul li a:hover{
+    text-shadow: 10px 10px 10px rgb(255, 255, 255);
+}
+.burger{
+    position: absolute;
+    top:5px;
+    right: 0px;
+    display: none;
+}
+.b{
+    background-color: aliceblue;
+    width: 30px;
+    height: 3px;
+    margin:10px;
+}
+#d1{grid-area: dd1;}
+#d2{grid-area: dd2;}
+#d3{grid-area: dd3;}
+#d4{grid-area: dd4;}
+#d5{grid-area: dd5;}
+#d6{grid-area: dd6;}
+#d7{grid-area: dd7;}
+#d8{grid-area: dd8;}
+#d9{grid-area: dd9;}
+#d10{grid-area: dd10;}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    column-gap: 20Px;
+    row-gap:60px;
+    padding-top:30px;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+    "dd1 dd2 dd3 dd4"
+    "dd5 dd6 dd7 dd8"
+    "dd9 dd10 . .";
+}
+
+.container div{
+    height: 250px;
+    width: 250px;
+    background-color: black;
+    position: relative;
+    border-radius: 30px;
+
+}
+.container div img{
+    width:250px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgb(23, 14, 153);
+}
+.container div img:hover{
+    box-shadow: 10px 10px 15px rgb(17, 6, 168);
+    filter:blur(3px);
+    border:30px;
+}
+
+.db{
+    position:absolute;
+    top:60%;
+    left:10%;
+    width:83%;
+    height: 40px;
+    background-color: rgba(55, 28, 206, 0.527);
+    display: none;
+    font-weight: 900;
+    font-size: 20px;
+    color: rgb(255, 47, 47);
+}
+.db:hover{
+    box-shadow: 10px 10px 15px rgb(255, 0, 0);
+    font-size: 22px;
+}
+.a_db{
+    display: inline;
+}
+/* .a_db1{
+    display: inline;
+}
+.a_db2{
+    display: inline;
+} */
+.container h2{
+    text-align: center;
+    text-shadow: 10px 10px 15px rgb(17, 6, 168);
+}
+@media only screen and (max-width:895px){
+    .container{
+        display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(10,1);
+    grid-template-areas: 
+    "dd1 dd2 dd3"
+    "dd4 dd5 dd6"
+    "dd7 dd8 dd9"
+    "dd10 . .";
+    row-gap: 60px;
+}
+}
+@media only screen and (max-width:850px) {
+    .links{
+        display: none;
+        margin-top: 20px;
+    }
+    .burger{
+        display: block;
+    }
+    nav,nav ul{
+        flex-direction: column;
+        text-align: center;
+        align-items: flex-start;
+    }
+    nav ul,nav ul li{
+        width:100vw;
+    }
+    nav .ll{
+        position: relative;
+        top:20px;
+    }
+    nav{
+        justify-items: center;
+    }
+    .ll{
+        align-items: flex-start;
+    }
+    .active_link{
+        display:inline;
+    }
+}
+@media screen and (max-width:800px){
+    .container{
+        display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(auto,10);
+    grid-template-areas: 
+    "dd1 dd2 "
+    "dd3 dd4 "
+    "dd5 dd6 "
+    "dd7 dd8 "
+    "dd9 dd10 ";
+    row-gap: 60px;
+    }
+}@media screen and (max-width:550px){
+    .container{
+        display: grid;
+    grid-template-columns: repeat(1,auto);
+    grid-template-rows: repeat(auto,10);
+    grid-template-areas: 
+    "dd1"
+    "dd2"
+    "dd3"
+    "dd4"
+    "dd5"
+    "dd6"
+    "dd7"
+    "dd8"
+    "dd9"
+    "dd10";
+    row-gap: 60px;
+}
+    
+}
+
+
