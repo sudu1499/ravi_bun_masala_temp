@@ -5,20 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ravi Bun Masala</title>
-    <link rel="stylesheet" href="{{url_for('static',filename='temp.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
 <body>
     <nav>
         <div class="ll">ravi snacks</div>
         <div class="links">
             <ul>
-            <li><a href="#">home</a></li>
+            <li><a href="/">home</a></li>
             <li><a href="#">location</a></li>
             <li><a href="#">cart</a></li>
-            <li><a href="#">login</a></li>
-            <li><a href="#">signup</a></li>
+            <li><a href="login">login</a></li>
+            <li><a href="signup">signup</a></li>
         </ul>
         </div>
         <div class="burger">
@@ -28,8 +29,8 @@
         </div>
     </nav>
     <div class="container">
-        <div id="d1" class="dishes"><img src="\static\bun.jpg" alt="bun masala"><button class="db" onclick="alert('bun masala added to cart')">ADD TO CART</button><h2 class="hd">BUN MASALA</h2></div>
-        <div id="d2" class="dishes"><img src="\static\nippattu.jpg" alt="nippattu"><button class="db" onclick="alert('nippattu masala added to cart')">ADD TO CART</button><h2 class="hd">NIPPATTU</h2></div>
+        <div id="d1" class="dishes"><img src="/static/bun.jpg" alt="bun masala"><button class="db" onclick="alert('bun masala added to cart')">ADD TO CART</button><h2 class="hd">BUN MASALA</h2></div>
+        <div id="d2" class="dishes"><img src="/static/nippattu.jpg" alt="nippattu"><button class="db" onclick="alert('nippattu masala added to cart')">ADD TO CART</button><h2 class="hd">NIPPATTU</h2></div>
         <div id="d3" class="dishes"></div>
         <div id="d4" class="dishes"></div>
         <div id="d5" class="dishes"></div>
@@ -39,6 +40,6 @@
         <div id="d9" class="dishes"></div>
         <div id="d10" class="dishes"></div>
     </div>
-    <script src="{{url_for('static',filename='temp.js')}}"></script>
+    <script src="{{url_for('static',filename='home.js')}}"></script>
 </body>
 </html>

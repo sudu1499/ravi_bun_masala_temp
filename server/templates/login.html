@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravi Bun Masala</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='login.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="ll">ravi snacks</div>
+        <div class="links">
+            <ul>
+            <li><a href="/">home</a></li>
+            <li><a href="#">location</a></li>
+            <li><a href="#">cart</a></li>
+            <li><a href="login">login</a></li>
+            <li><a href="signup">signup</a></li>
+        </ul>
+        </div>
+        <div class="burger">
+            <div class="b"></div>
+            <div class="b"></div>
+            <div class="b"></div>
+        </div>
+    </nav>
+    <div class="login">
+        <form action="#" method="post"> 
+            <label for="eid">Email id</label><br><input type="text" name="eid" placeholder="email-id" id="i1" >
+            <br><label for="pswd">Password</label><br><input type="password" name="pswd" placeholder='password' id="i2" ><br>
+            <button class="loginb">Log In</button><br>
+            <a href="signup" style="font-size: 15px;text-decoration:underline;">Not have an account?</a>
+        </form>
+    </div>
+    <script src="{{url_for('static',filename='login.js')}}"></script>
+</body>
+</html>
