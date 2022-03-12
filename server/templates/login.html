@@ -17,7 +17,7 @@
             <ul>
             <li><a href="/">home</a></li>
             <li><a href="#">location</a></li>
-            <li><a href="#">cart</a></li>
+            <li><a href="cart">cart</a></li>
             <li><a href="login">login</a></li>
             <li><a href="signup">signup</a></li>
         </ul>
@@ -29,12 +29,15 @@
         </div>
     </nav>
     <div class="login">
-        <form action="#" method="post"> 
-            <label for="eid">Email id</label><br><input type="text" name="eid" placeholder="email-id" id="i1" >
-            <br><label for="pswd">Password</label><br><input type="password" name="pswd" placeholder='password' id="i2" ><br>
+        <form action="validate" method="POST"> 
+            <label id="mainname">LOGIN</label>
+        <br>
+            <label for="i1">Email id</label><br><input type="email" name="eid" placeholder="email-id" id="i1"  required>
+            <br><label for="i2">Password</label><br><input type="password" name="pswd" placeholder='password' id="i2" required><br>
             <button class="loginb">Log In</button><br>
             <a href="signup" style="font-size: 15px;text-decoration:underline;">Not have an account?</a>
-        </form>
+            <h1 id="result" style="color:red">{{ result }}</h1>
+            </form>
     </div>
     <script src="{{url_for('static',filename='login.js')}}"></script>
 </body>
